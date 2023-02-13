@@ -10,7 +10,7 @@ function Test-RemotePC {
         
     }
 
-    process {
+    proce {
         get-process | Where-Object name -like Veeam.Guest.Interaction.Proxy
     }
 
