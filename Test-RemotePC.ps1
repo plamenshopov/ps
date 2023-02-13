@@ -3,8 +3,8 @@ function Test-RemotePC {
     param (
         [parameter(Mandatory=$true)][string]$PCname
     )
-    Invoke-Command -ComputerName $PCname -ScriptBlock {
-    begin{
+    Invoke -ComputerName $PCname -ScriptBlock {
+    ben{
         Write-Output ""
         Write-Output "$($PSStyle.bold)Beginning the check$($PSStyle.bold)"
         
