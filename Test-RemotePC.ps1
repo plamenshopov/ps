@@ -3,6 +3,9 @@ function Test-RemotePC {
     param (
         [parameter(Mandatory=$true)][string]$PCname
     )
+    
+    $ErrorActionPreference = "Stop"
+
     Invoke -ComputerName $PCname -ScriptBlock {
     ben{
         Write-Output ""
