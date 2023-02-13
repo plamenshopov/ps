@@ -4,6 +4,7 @@ function Test-RemotePC {
         [parameter(Mandatory=$true)][string]$PCname
     )
     
+    try {
     $ErrorActionPreference = "Stop"
 
     Invoke -ComputerName $PCname -ScriptBlock {
@@ -22,4 +23,9 @@ function Test-RemotePC {
         Write-Host "$($PSStyle.bold)The check is completed$($PSStyle.bold)"
     }
     }
+} 
+    catch {
+        $ErrorMessage = $_.Exception.Message
+        Write-Output $ErrorMessage
+        exit(1)}
 }
