@@ -17,6 +17,7 @@ function Test-RemotePC {
     end{
         Write-Output ""
         Write-Host "$($PSStyle.bold)The check is completed$($PSStyle.bold)"
+        Write-Output ""
     }
     }
 }
