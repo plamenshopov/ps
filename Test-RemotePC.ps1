@@ -7,7 +7,7 @@ function Test-RemotePC {
     try {
     $ErrorActionPreference = "Stop"
 
-    Invoke -ComputerName $PCname -ScriptBlock {
+    Invoke-Command -ComputerName $PCname -ScriptBlock {
     ben{
         Write-Output ""
         Write-Output "$($PSStyle.bold)Beginning the check$($PSStyle.bold)"
