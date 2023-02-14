@@ -7,14 +7,14 @@ function Test-RemotePC {
     try {
     $ErrorActionPreference = "Stop"
 
-    Invoke-Command -ComputerName $PCname -ScriptBlock {
+    Invoke -ComputerName $PCname -ScriptBlock {
     begin{
         Write-Output ""
         Write-Output "$($PSStyle.bold)Beginning the check$($PSStyle.bold)"
         
     }
 
-    proce {
+    process {
         get-process | Where-Object name -like Veeam.Guest.Interaction.Proxy
     }
 
