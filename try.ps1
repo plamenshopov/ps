@@ -20,5 +20,5 @@ try {
 } 
     catch {
         $ErrorMessage = $_.Exception.Message
-        Write-Output $ErrorMessage
+        Write-Host $ErrorMessage
         exit(1)}
