@@ -2,13 +2,13 @@ try {
     $ErrorActionPreference = "Stop"
 
     Invoke -ComputerName $PCname -ScriptBlock {
-    ben{
+    begin{
         Write-Output ""
         Write-Output "$($PSStyle.bold)Beginning the check$($PSStyle.bold)"
         
     }
 
-    proce {
+    process {
         get-process | Where-Object name -like Veeam.Guest.Interaction.Proxy
     }
 
